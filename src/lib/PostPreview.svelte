@@ -12,6 +12,16 @@
 		const target = event.target;
 		if (target.classList.contains('upvote')) {
 			upvote = !upvote;
+
+			// switching case from downvote to upvote
+			if (downvote) {
+				target.style.color = 'green';
+				target.nextElementSibling.style.color = 'black';
+				voteCount += 2;
+				downvote = !downvote;
+				return;
+			}
+
 			downvote = false;
 
 			if (upvote) {
@@ -24,6 +34,16 @@
 			}
 		} else {
 			downvote = !downvote;
+
+			// switching case from upvote to downvote
+			if (upvote) {
+				target.style.color = 'red';
+				target.previousElementSibling.style.color = 'black';
+				voteCount -= 2;
+				upvote = !upvote;
+				return;
+			}
+
 			upvote = false;
 
 			if (downvote) {
