@@ -43,8 +43,8 @@
 >
 	<div class="flex-auto pr-6">
 		<div>
-			<span on:click={vote} class="material-symbols-outlined upvote"> expand_less </span>
-			<span on:click={vote} class="material-symbols-outlined downvote"> expand_more </span>
+			<button on:click={vote} class="material-symbols-outlined upvote"> expand_less </button>
+			<button on:click={vote} class="material-symbols-outlined downvote"> expand_more </button>
 		</div>
 	</div>
 	<div class="flex-auto">
