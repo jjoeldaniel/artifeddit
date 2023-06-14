@@ -46,7 +46,7 @@
 </script>
 
 <div class="container h-full mx-auto flex justify-center">
-	<div class="space-y-5 pt-5 items-center">
+	<div class="space-y-5 pt-5 max-sm:pt-0 items-center">
 		<PostPreview
 			title={sample.title}
 			content={sample.content}
