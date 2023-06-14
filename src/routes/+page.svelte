@@ -11,7 +11,7 @@
 
 <div class="container h-full mx-auto flex justify-center">
 	<div class="space-y-5 pt-11 items-center">
-		{#each Array(4) as _, i}
+		{#each Array(6) as _, i}
 			<PostPreview title={sample.title} content={sample.content} author={sample.author} />
 		{/each}
 	</div>
