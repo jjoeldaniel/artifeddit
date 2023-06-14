@@ -13,12 +13,13 @@
 			gridColumns="grid-cols-3"
 			slotDefault="place-content-stretch"
 			slotTrail="place-content-end"
+			gap="gap-0"
 		>
 			<svelte:fragment slot="lead"
 				><a href="/" class="font-bold text-xl">🧠 <span class="max-sm:hidden">ArtifEddit</span></a
 				></svelte:fragment
 			>
-			<input class="input max-sm:hidden" title="search" type="text" placeholder="🔍 Search.." />
+			<input class="input" title="search" type="text" placeholder="🔍 Search.." />
 			<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
