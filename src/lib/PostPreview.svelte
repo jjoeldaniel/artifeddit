@@ -6,6 +6,7 @@
 
 	export let upvote = false;
 	export let downvote = false;
+	export let voteCount = 0;
 
 	function vote(event) {
 		const target = event.target;
@@ -16,8 +17,10 @@
 			if (upvote) {
 				target.style.color = 'green';
 				target.nextElementSibling.style.color = 'black';
+				voteCount++;
 			} else {
 				target.style.color = 'black';
+				voteCount--;
 			}
 		} else {
 			downvote = !downvote;
@@ -26,8 +29,10 @@
 			if (downvote) {
 				target.style.color = 'red';
 				target.previousElementSibling.style.color = 'black';
+				voteCount--;
 			} else {
 				target.style.color = 'black';
+				voteCount++;
 			}
 		}
 	}
@@ -39,11 +44,12 @@
 />
 
 <div
-	class="flex max-w-5xl rounded-lg p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]"
+	class="flex max-w-5xl pl-0 rounded-lg p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]"
 >
-	<div class="flex-auto pr-6">
-		<div>
+	<div class="flex-auto pl-4 pr-4">
+		<div class="text-center flex flex-col">
 			<button on:click={vote} class="material-symbols-outlined upvote"> expand_less </button>
+			{voteCount}
 			<button on:click={vote} class="material-symbols-outlined downvote"> expand_more </button>
 		</div>
 	</div>
