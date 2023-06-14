@@ -15,7 +15,7 @@
 			slotTrail="place-content-end"
 		>
 			<svelte:fragment slot="lead"
-				><span class="font-bold text-xl">🧠 <span class="max-sm:hidden">ArtifEddit</span></span
+				><a href="/" class="font-bold text-xl">🧠 <span class="max-sm:hidden">ArtifEddit</span></a
 				></svelte:fragment
 			>
 			<input class="input max-sm:hidden" title="search" type="text" placeholder="Search.." />
