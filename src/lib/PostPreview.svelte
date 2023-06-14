@@ -67,7 +67,7 @@
 	class="flex max-w-5xl pl-0 text-sm rounded-lg p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]"
 >
 	<div class="flex-auto pl-4 pr-4">
-		<div class="text-center flex flex-col">
+		<div class="text-center flex flex-col max-sm:hidden">
 			<button on:click={vote} class="material-symbols-outlined upvote"> expand_less </button>
 			{voteCount}
 			<button on:click={vote} class="material-symbols-outlined downvote"> expand_more </button>
@@ -77,12 +77,22 @@
 		<h5 class="mb-2 text-xl font-semibold leading-tight text-neutral-800 dark:text-neutral-50">
 			{title}
 		</h5>
-		<p class="mb-4 text-base text-neutral-600 dark:text-neutral-200 line-clamp-2">
+		<p class="mb-4 text-base text-neutral-600 dark:text-neutral-200 line-clamp-3">
 			{content}
 		</p>
-		<p class="text-xs">
+		<p class="max-sm:hidden">
 			Posted by {author}
 		</p>
+		<div class="flex place-content-between sm:hidden">
+			<div class="text-center flex">
+				<button on:click={vote} class="material-symbols-outlined upvote"> expand_less </button>
+				{voteCount}
+				<button on:click={vote} class="material-symbols-outlined downvote"> expand_more </button>
+			</div>
+			<p>
+				Posted by {author}
+			</p>
+		</div>
 	</div>
 </div>
 
