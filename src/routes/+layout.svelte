@@ -1,10 +1,23 @@
 <script lang='ts'>
-	// The ordering of these imports is critical to your app working properly
+	// Required Skeleton imports
 	import '@skeletonlabs/skeleton/themes/theme-crimson.css';
-	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
-	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
+
+	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton';
 </script>
 
-<slot />
+
+<AppShell>
+	<svelte:fragment slot="header">
+
+		<AppBar gridColumns="grid-cols-3" slotDefault="place-content-stretch" slotTrail="place-content-end">
+			<svelte:fragment slot="lead"><span class="font-bold text-xl">🧠 <span class="max-sm:hidden">ArtifEddit</span></span></svelte:fragment>
+			<input class="input  max-sm:hidden" title="search" type="text" placeholder="Search.." />
+			<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
+		</AppBar>
+
+	</svelte:fragment>
+
+	<slot />
+</AppShell>
