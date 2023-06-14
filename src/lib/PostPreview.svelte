@@ -64,7 +64,7 @@
 />
 
 <div
-	class="flex max-w-5xl pl-0 rounded-lg p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]"
+	class="flex max-w-5xl pl-0 text-sm rounded-lg p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]"
 >
 	<div class="flex-auto pl-4 pr-4">
 		<div class="text-center flex flex-col">
