@@ -3,6 +3,7 @@
 	export let title: string = 'Title';
 	export let author: string = 'Author';
 	export let content: string = 'Content';
+	export let subreddit: string = 'Subreddit';
 
 	export let upvote = false;
 	export let downvote = false;
@@ -80,9 +81,12 @@
 		<p class="mb-4 text-base text-neutral-600 dark:text-neutral-200 line-clamp-3">
 			{content}
 		</p>
-		<p class="max-sm:hidden">
-			Posted by {author}
-		</p>
+		<div class="flex place-content-between max-sm:hidden">
+			<p>{subreddit}</p>
+			<p>
+				Posted by u/{author}
+			</p>
+		</div>
 		<div class="flex place-content-between sm:hidden">
 			<div class="text-center flex">
 				<button on:click={vote} class="material-symbols-outlined upvote"> expand_less </button>
@@ -90,7 +94,7 @@
 				<button on:click={vote} class="material-symbols-outlined downvote"> expand_more </button>
 			</div>
 			<p>
-				Posted by {author}
+				{subreddit}
 			</p>
 		</div>
 	</div>
