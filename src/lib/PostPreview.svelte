@@ -16,7 +16,7 @@
 			// switching case from downvote to upvote
 			if (downvote) {
 				target.style.color = 'green';
-				target.nextElementSibling.style.color = 'black';
+				target.nextElementSibling.style.color = 'inherit';
 				voteCount += 2;
 				downvote = !downvote;
 				return;
@@ -26,10 +26,10 @@
 
 			if (upvote) {
 				target.style.color = 'green';
-				target.nextElementSibling.style.color = 'black';
+				target.nextElementSibling.style.color = 'inherit';
 				voteCount++;
 			} else {
-				target.style.color = 'black';
+				target.style.color = 'inherit';
 				voteCount--;
 			}
 		} else {
@@ -38,7 +38,7 @@
 			// switching case from upvote to downvote
 			if (upvote) {
 				target.style.color = 'red';
-				target.previousElementSibling.style.color = 'black';
+				target.previousElementSibling.style.color = 'inherit';
 				voteCount -= 2;
 				upvote = !upvote;
 				return;
@@ -48,10 +48,10 @@
 
 			if (downvote) {
 				target.style.color = 'red';
-				target.previousElementSibling.style.color = 'black';
+				target.previousElementSibling.style.color = 'inherit';
 				voteCount--;
 			} else {
-				target.style.color = 'black';
+				target.style.color = 'inherit';
 				voteCount++;
 			}
 		}
