@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Avatar } from '@skeletonlabs/skeleton';
 	export let title: string = 'Title';
 	export let author: string = 'Author';
 	export let content: string = 'Content';
@@ -9,7 +8,7 @@
 	export let downvote = false;
 	export let voteCount = 0;
 
-	function vote(event) {
+	function vote(event: any) {
 		const target = event.target;
 		if (target.classList.contains('upvote')) {
 			upvote = !upvote;
